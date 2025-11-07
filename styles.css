@@ -92,6 +92,11 @@ main {
   text-align: left;
 }
 
+.img {
+  max-width: 100%;
+  height: auto;
+}
+
 .contact-row {
   display: flex;
   gap: 8px;
@@ -107,7 +112,7 @@ main {
   font-weight: 600;
 }
 
-.projets .language-switch {
+.language-switch {
   position: fixed;
   top: 12px;
   right: 12px;
@@ -119,31 +124,14 @@ main {
 }
 .language-switch button {
   padding: 6px 10px;
-  margin: 0;
   border-radius: 8px;
   border: none;
   cursor: pointer;
   background: #111827;
   color: white;
-  font-weight: 600;
 }
 .language-switch button.active {
   background: #ebde25;
-}
-
-@media (max-width: 420px) {
-  .avatar {
-    width: 120px;
-    height: 120px;
-  }
-  .language-switch {
-    display: flex;
-    /* position: static; */
-    /* margin: 8px auto 0 auto; */
-    /* background: transparent; */
-    /* box-shadow: none; */
-    /* justify-content: center; */
-  }
 }
 
 #hero {
@@ -177,19 +165,12 @@ main {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .language-switch {
-    /* margin-bottom: 1rem; */
-  }
-}
-
 #exercices {
   padding: 2rem;
-  /* max-width: 960px; */
   margin: 12rem auto;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(17, 24, 39, 0.08);
+  /* box-shadow: 0 6px 20px rgba(17, 24, 39, 0.08); */
 }
 
 .exercices-footer {
@@ -216,12 +197,13 @@ h4 {
 
 .grid-exercices {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 12px;
 }
 
 .projets {
-  margin: 12rem auto;
+  display: flex;
+  margin: 1rem auto;
 }
 
 .btn {
@@ -232,37 +214,51 @@ h4 {
   padding: 8px;
   width: 150px;
 }
-
+@media (max-width: 768px) {
+  .projets {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    width: 90%;
+  }
+}
 @media (max-width: 900px) {
   .grid-exercices {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 480px) {
   .grid-exercices {
     grid-template-columns: 1fr;
   }
-}
 
-.content.open {
-  animation: fadeIn 0.6s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+  .projets {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
+  main {
+    width: 90%;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-sub {
+    font-size: 0.9rem;
+  }
+}
 .main_footer {
-  .footer_content {
-    color: rgb(219, 124, 7);
-    .contact_footer {
-      color: rgb(219, 124, 7);
-    }
-  }
+  margin: 12rem auto;
+}
+
+.footer_content {
+  color: rgb(219, 124, 7);
+}
+
+.contact_footer {
+  color: rgb(219, 124, 7);
 }
