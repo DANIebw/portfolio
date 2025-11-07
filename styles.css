@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 html,
@@ -16,12 +17,8 @@ body {
 
 body {
   font-family: Arial;
-
-  background: linear-gradient(
-      rgba(255, 255, 255, 0.35),
-      rgba(255, 255, 255, 0.35)
-    ),
-    url("image.po.jpg") center/cover no-repeat;
+  background-color: bisque;
+  background: url("image.po.jpg"); /* center/cover no-repeat; */
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -31,10 +28,17 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  background-color: bisque;
+  /* background-color: bisque; */
   height: auto;
   width: 100%;
   margin-bottom: 120px;
+  position: fixed;
+}
+.menu {
+  display: flex;
+  background: rgba(255, 255, 255, 0.471);
+  border-radius: 12px;
+  padding: 10px;
 }
 
 main {
@@ -65,7 +69,7 @@ main {
   right: 12px;
   display: flex;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.471);
   padding: 6px;
   border-radius: 12px;
 }
