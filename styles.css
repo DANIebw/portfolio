@@ -56,3 +56,6 @@ main {
 [data-lang].active {
   display: inline;
 }
+
+.language-switch {
+}
