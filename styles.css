@@ -58,4 +58,23 @@ main {
 }
 
 .language-switch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.65);
+  padding: 6px;
+  border-radius: 12px;
+}
+.language-switch button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #111827;
+  color: white;
+}
+.language-switch button.active {
+  background: #ebde25;
 }
