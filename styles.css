@@ -97,3 +97,15 @@ main {
   margin: 700px auto 100px auto;
   border: 4px solid #111827;
 }
+.back-to-top {
+  display: inline-block;
+  margin: 6px;
+  padding: 8px 12px;
+  background: bisque;
+  color: black;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.back-to-top:hover {
+  opacity: 0.9;
+}
